@@ -6,8 +6,8 @@ fn main() {
     println!("Hello, world!");
 }
 
-async fn foo() {}
+async fn foo() -> usize { 0 }
 
-fn bar() -> Future<Output = ()> { async {} }
+fn bar() -> impl Future<Output = usize> { async { 0 } }
 
 // foo and bar are the same
